@@ -57,7 +57,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/reveal.js/dist/reveal.css",
+              "node_modules/reveal.js/dist/theme/white.css",
+              "node_modules/reveal.js/plugin/highlight/monokai.css"
             ],
             "scripts": [],
             "customWebpackConfig": {
@@ -100,7 +103,8 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "wcnexus:build"
+            "browserTarget": "wcnexus:build",
+            "port": 38310
           },
           "configurations": {
             "production": {
