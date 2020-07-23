@@ -16,6 +16,29 @@ export class HomeViewComponent implements OnInit {
   //   plugins: [ Markdown ]
   // })
 
+  num = 0;
+  isIMGShown = false;
+  isLiuPPTShown = false;
+
+  onNumpadClicked = (e: Event) => {
+    this.addNum();
+  };
+
+  onToggleIMGClicked = (e: Event) => {
+    this.isIMGShown = !this.isIMGShown;
+  };
+
+  onLiuPPTClicked = (e: Event) => {
+    this.isLiuPPTShown = !this.isLiuPPTShown;
+  };
+
+
+  addNum = () => {
+    console.log("num++");
+    
+    this.num++;
+  };
+
   ngOnInit(): void {
   }
 

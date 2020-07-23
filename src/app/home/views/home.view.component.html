@@ -1,13 +1,20 @@
 <section class="HomeView">
   <div class="reveal">
     <div class="slides">
-      <section>
-        <h1>Welcome to wcnexus</h1>
-        <h2>Of course we will write some css later</h2>
-      </section>
+      <section SlideCoverComponent></section>  <!-- This is an ng component!! -->
+
       <section>
         <section>
           <h1>Vertical 1 not sure what to do</h1>
+          <span (click)="onNumpadClicked($event)">Number: {{ num }}</span>
+          <button (click)="onToggleIMGClicked($event)">Toggle img</button>
+          <button (click)="onLiuPPTClicked($event)">Toggle LiuPPT</button>
+          <div *ngIf="isIMGShown">
+            <img src="assets/images/test.png" alt="test.png">
+          </div>
+        </section>
+        <section *ngIf="isLiuPPTShown">
+          <h1>This is a liu ppt</h1>
         </section>
         <section>
           <h1>Vertical 2 good enough?</h1>
