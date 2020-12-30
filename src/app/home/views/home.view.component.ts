@@ -12,10 +12,6 @@ export class HomeViewComponent implements OnInit {
 
   constructor() { }
 
-  // deck = new Reveal({
-  //   plugins: [ Markdown ]
-  // })
-
   num = 0;
   isIMGShown = false;
   isLiuPPTShown = false;
