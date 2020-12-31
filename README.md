@@ -1,6 +1,8 @@
 # wcnexus v4
 wc's personal website v4
 
+![cover](https://i.imgur.com/4X1aCVI.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development
