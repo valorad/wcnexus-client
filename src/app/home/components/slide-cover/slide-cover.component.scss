@@ -1,0 +1,50 @@
+@import "src/theme";
+
+.title {
+  margin: 0.5em auto;
+  h1 {
+    color: $primary;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  }
+  .logo {
+    margin-right: 1em;
+  }
+  i.icon-wcnlogo {
+    color: $primary;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 4em;
+  }
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.language {
+  margin-top: 2em;
+  font-size: 0.6em;
+  padding-left: 40%;
+}
+
+label {
+  display: flex;
+}
+
+.langBox {
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+  appearance: none;
+  &:checked + .langBox {
+    color: $primary;
+    &::before {
+      content: "☑️";
+      position: absolute;
+      left: -1.2em;
+    }
+  }
+}

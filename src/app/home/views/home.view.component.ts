@@ -41,6 +41,7 @@ export class HomeViewComponent implements OnInit {
   ngAfterViewInit() {
     Reveal.initialize(
       {
+        navigationMode: "linear",
         plugins: [
           Markdown,
           Highlight,

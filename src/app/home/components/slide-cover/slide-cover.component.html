@@ -1,11 +1,32 @@
-<div>
-  <h1>wcnexus v4</h1>
+<div class="cover">
+  <div class="title flexCenter">
+    <div class="logo">
+      <picture class="flexCenter">
+        <i class="iconfont icon-wcnlogo"></i>
+      </picture>
+    </div>
+    <h1>wcnexus</h1>
+  </div>
+
   <h2>We choose to live many</h2>
   <div class="language">
-    <ul>
-      <li>改成用中文显示</li>
-      <li>Continue browsing in English</li>
-      <li>Je parle français</li>
-    </ul>
+    <label>
+      <input type="radio" name="language" value="zh" />
+      <div class="langBox">
+        <span>改成用中文显示 >></span>
+      </div>
+    </label>
+    <label>
+      <input type="radio" name="language" value="en" checked />
+      <div class="langBox">
+        <span>Continue browsing in English >></span>
+      </div>
+    </label>
+    <label>
+      <input type="radio" name="language" value="fr" />
+      <div class="langBox">
+        <span>On parle français >></span>
+      </div>
+    </label>
   </div>
 </div>
