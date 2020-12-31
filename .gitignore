@@ -45,3 +45,8 @@ testem.log
 .DS_Store
 Thumbs.db
 .old/**
+
+# Site
+src/assets/videos/**
+
+!readme.*
