@@ -9,6 +9,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { AboutSiteComponent } from './components/about-site/about-site.component';
 import { ProjectCaseComponent } from './components/project-case/project-case.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { GameWallComponent } from './components/game-wall/game-wall.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ThankYouComponent } from './components/thank-you/thank-you.component';
     AboutSiteComponent,
     ProjectCaseComponent,
     ThankYouComponent,
+    GameWallComponent,
   ],
   imports: [
     CommonModule,

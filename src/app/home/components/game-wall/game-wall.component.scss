@@ -1,0 +1,18 @@
+@import "src/theme";
+
+.gameAvatars {
+  flex-wrap: wrap;
+  article {
+    margin: 0.1em;
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  picture {
+    width: 3em;
+    height: 3em;
+    border: 0.1rem solid $primary;
+    background-color: #1e1e1e;
+  }
+}
