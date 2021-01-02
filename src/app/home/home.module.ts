@@ -10,6 +10,7 @@ import { AboutSiteComponent } from './components/about-site/about-site.component
 import { ProjectCaseComponent } from './components/project-case/project-case.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
 import { GameWallComponent } from './components/game-wall/game-wall.component';
+import { XMJListComponent } from './components/xmj-list/xmj-list.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { GameWallComponent } from './components/game-wall/game-wall.component';
     ProjectCaseComponent,
     ThankYouComponent,
     GameWallComponent,
+    XMJListComponent
   ],
   imports: [
     CommonModule,
