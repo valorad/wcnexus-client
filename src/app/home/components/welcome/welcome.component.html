@@ -1,21 +1,38 @@
-<div>
-  <!-- use a div wrapper to hack as a slide background -->
-  <section GameWallComponent></section>  <!-- This is an ng component!! -->
-</div>
-
 <section>
-  <h2>Welcome to wcnexus!</h2>
 
-  <p>This is my site</p>
-  <p>This will be another paragraph</p>
+  <div class="r-stack">
+
+    <div>
+      <!-- use a div wrapper to hack as a slide background -->
+      <section GameWallComponent></section>  <!-- This is an ng component!! -->
+    </div>
+
+    <!-- To make the 1st fragment appear at start:  -->
+    <!-- Set a same number of data-fragment-index="1" for the first 2 fragments -->
+    <!-- Add a "fade-out" class for 1st fragment, "current-visible" class for all other fragments -->
+    <div class="fragment fade-out" data-fragment-index="0" > 
+      <h2>Welcome to wcnexus!</h2>
+      <p>wcnexus.com is Chenxuan (Steve)'s personal website.</p>
+    </div>
+    <div class="fragment current-visible" data-fragment-index="1">
+      <p>
+        The original purpose of developing this website was to practice my skills in software development, it was also one of my wish of having my website a couple of years ago.
+      </p>
+    </div>
+    <div class="fragment current-visible"  data-fragment-index="2">
+  
+      <p>In daily life, I am a gamer who is a crazy fan of video games. The site name was inspired by the idea of the famous game mod site - nexusmods.com, in which hundreds of game mods were shared.
+      </p>
+    </div>
+
+    <div class="fragment current-visible"  data-fragment-index="3">
+  
+      <p>Just like how I love game modding, I made this website because I loved front-end development (still do), and wanted to create a display case for what tools I used and what skills I had, and share the experience with others. 
+      </p>
+    </div>
+
+  </div>
+
+
+
 </section>
-
-<section>
-  <p>
-    Located at basement, This will be another very very long paragraph. 
-    Located at basement, This will be another very very long paragraph. 
-    Located at basement, This will be another very very long paragraph. 
-    Located at basement, This will be another very very long paragraph. 
-  </p>
-</section>
-
