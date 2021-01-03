@@ -15,6 +15,7 @@ import { TechListComponent } from './components/tech-list/tech-list.component';
 import { InstanceCardComponent } from './components/instance-card/instance-card.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProjectListComponent } from './components/project-list/project-list.com
     TechListComponent,
     InstanceCardComponent,
     ProjectDetailComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    CatalogComponent
   ],
   imports: [
     CommonModule,
