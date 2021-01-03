@@ -13,6 +13,8 @@ import { GameWallComponent } from './components/game-wall/game-wall.component';
 import { XMJListComponent } from './components/xmj-list/xmj-list.component';
 import { TechListComponent } from './components/tech-list/tech-list.component';
 import { InstanceCardComponent } from './components/instance-card/instance-card.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { InstanceCardComponent } from './components/instance-card/instance-card.
     GameWallComponent,
     XMJListComponent,
     TechListComponent,
-    InstanceCardComponent
+    InstanceCardComponent,
+    ProjectDetailComponent,
+    ProjectListComponent
   ],
   imports: [
     CommonModule,
