@@ -1,3 +1,9 @@
 <div class="xmjList flexCenter">
-  xmj-list
+  <ul>
+    <li *ngFor="let xmj of xiaoMaJias">
+      <picture class="flexCenter">
+        {{ xmj.name }}
+      </picture>
+    </li>
+  </ul>
 </div>

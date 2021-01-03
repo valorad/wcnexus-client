@@ -6,7 +6,7 @@ interface IGameProfile {
 }
 
 @Component({
-  selector: 'section [GameWallComponent]',
+  selector: 'home-game-wall',
   templateUrl: './game-wall.component.html',
   styleUrls: ['./game-wall.component.scss']
 })

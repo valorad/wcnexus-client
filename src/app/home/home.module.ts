@@ -11,6 +11,8 @@ import { ProjectCaseComponent } from './components/project-case/project-case.com
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
 import { GameWallComponent } from './components/game-wall/game-wall.component';
 import { XMJListComponent } from './components/xmj-list/xmj-list.component';
+import { TechListComponent } from './components/tech-list/tech-list.component';
+import { InstanceCardComponent } from './components/instance-card/instance-card.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { XMJListComponent } from './components/xmj-list/xmj-list.component';
     ProjectCaseComponent,
     ThankYouComponent,
     GameWallComponent,
-    XMJListComponent
+    XMJListComponent,
+    TechListComponent,
+    InstanceCardComponent
   ],
   imports: [
     CommonModule,
