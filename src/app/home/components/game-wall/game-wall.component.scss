@@ -1,18 +1,19 @@
 @import "src/theme";
 
 .gameAvatars {
+
+  position: fixed;
+  top: 0;
+  left: 0;
   flex-wrap: wrap;
-  article {
+
+  home-instance-card {
     margin: 0.1em;
     opacity: 0.2;
+    transition: all 0.2s ease-in;
     &:hover {
       opacity: 1;
     }
   }
-  picture {
-    width: 3em;
-    height: 3em;
-    border: 0.1rem solid $primary;
-    background-color: #1e1e1e;
-  }
+
 }

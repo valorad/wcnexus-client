@@ -1,5 +1,6 @@
 <div class="gameAvatars flexCenter">
-  <article *ngFor="let game of games">
-    <picture class="flexCenter">{{ game.name }}</picture>
-  </article>
+  <home-instance-card
+    *ngFor="let game of games"
+    [InstanceCardProps]="gameToInstance(game)"
+  ></home-instance-card>
 </div>

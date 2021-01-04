@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 interface IGameProfile {
   name: string,
-  avatar: string,
+  image: string,
 }
 
 @Component({
@@ -13,13 +13,35 @@ interface IGameProfile {
 export class GameWallComponent implements OnInit {
 
   games: IGameProfile[] = [];
+
+  baseStyle = {
+    width: "3em",
+    height: "3em",
+  };
+
+  gameToInstance = (game: IGameProfile) => {
+    return {
+      ...game,
+      children: {
+        image: {
+          styles: this.baseStyle
+        },
+        title: {
+          styles: {
+            display: "none"
+          }
+        }
+      },
+    }
+  };
+
   constructor() { }
 
   ngOnInit(): void {
       for (let i = 0; i < 30; i++) {
         this.games.push({
         name: `game-${i}`,
-        avatar: `avatar of game-${i}`,
+        image: `ag${i}`,
       });
     }
   }
