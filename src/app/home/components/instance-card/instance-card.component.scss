@@ -1,12 +1,19 @@
 @import "src/theme";
 
+.instanceCard {
+  position: relative;
+  cursor: pointer;
+}
+
 picture {
   width: 5em;
   height: 5em;
   border: 0.1rem solid $primary;
-  background-color: #1e1e1e;
 }
 
 .nameBox {
   font-size: 0.5em;
+  position: absolute;
+  bottom: 0.3em;
+  width: 100%;
 }
