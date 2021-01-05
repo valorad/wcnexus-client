@@ -1,9 +1,9 @@
 <div class="xmjList flexCenter">
   <ul>
     <li *ngFor="let xmj of xiaoMaJias">
-      <picture class="flexCenter">
-        {{ xmj.name }}
-      </picture>
+      <home-instance-card
+        [InstanceCardProps]="xmjToInstance(xmj)"
+      ></home-instance-card>
     </li>
   </ul>
 </div>

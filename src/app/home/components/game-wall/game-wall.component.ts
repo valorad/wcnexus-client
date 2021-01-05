@@ -15,6 +15,7 @@ export class GameWallComponent implements OnInit {
   games: IGameProfile[] = [];
 
   baseStyle = {
+    "background-color": "#1e1e1e",
     width: "3em",
     height: "3em",
   };

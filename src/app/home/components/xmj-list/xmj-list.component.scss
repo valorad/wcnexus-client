@@ -12,15 +12,13 @@
     margin: 0;
   }
 
-  picture {
+  li {
     transition: all 0.3s ease-in;
     opacity: 0.4;
-    height: 5em;
-    width: 5em;
-    border: 0.1em solid $primary;
     margin: 0.2em;
     &:hover {
       opacity: 1;
     }
   }
+
 }

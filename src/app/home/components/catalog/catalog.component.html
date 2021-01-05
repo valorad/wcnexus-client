@@ -1,10 +1,8 @@
 <section>
   <h2>Table of Contents</h2>
   <ul>
-    <li>Welcome</li>
-    <li>About me</li>
-    <li>About wcn</li>
-    <li>Project case</li>
-    <li>Thank you</li>
+    <li *ngFor="let chapter of chapters">
+      <home-instance-card [InstanceCardProps]="chapter"></home-instance-card>
+    </li>
   </ul>
 </section>

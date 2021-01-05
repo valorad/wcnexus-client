@@ -1,1 +1,9 @@
-<p>tech-list works!</p>
+<div class="techList">
+  <ul>
+    <li *ngFor="let tech of techs">
+      <home-instance-card
+        [InstanceCardProps]="techToInstance(tech)"
+      ></home-instance-card>
+    </li>
+  </ul>
+</div>
