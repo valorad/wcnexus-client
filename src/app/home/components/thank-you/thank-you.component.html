@@ -3,9 +3,11 @@
   <p>Thanks for visiting my site!</p>
   <p>You may continue to visit the following sites</p>
   <ul>
-    <li>Site</li>
-    <li>Site</li>
-    <li>Site</li>
+    <li *ngFor="let site of sites">
+      <home-instance-card
+        [InstanceCardProps]="siteToInstance(site)"
+      ></home-instance-card>
+    </li>
   </ul>
   <p>Also please consider following me on Twitter, Weibo, Zhihu, Github and other social media!</p>
   <footer>

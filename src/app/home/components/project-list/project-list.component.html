@@ -1,8 +1,5 @@
 <ul>
-  <li>p</li>
-  <li>r</li>
-  <li>o</li>
-  <li>j</li>
-  <li>e</li>
-  <li>t</li>
+  <li *ngFor="let project of projects">
+    <home-instance-card [InstanceCardProps]="projectToInstance(project)"></home-instance-card>
+  </li>
 </ul>

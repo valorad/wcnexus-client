@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IInstanceCardProps } from '../instance-card/instance-card.component';
 
 interface IXiaoMaJiaInfo {
   name: string,
