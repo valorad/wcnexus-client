@@ -29,6 +29,7 @@ export class InstanceCardComponent implements OnInit {
     return this._InstanceCardProps as IInstanceCardProps;
   }
   @Input() set InstanceCardProps(v: Partial<IInstanceCardProps>) {
+    // Fill with default data if not provided
     this._InstanceCardProps = {
       children: {
         image: {
