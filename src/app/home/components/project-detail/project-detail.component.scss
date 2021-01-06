@@ -1,0 +1,30 @@
+@import "src/theme";
+
+.projectDetail {
+  display: flex;
+  flex-wrap: nowrap;
+  h3, h4 {
+    text-transform: none;
+  }
+}
+
+.leftAside {
+  flex-grow: 1;
+}
+
+.rightAside {
+  flex-grow: 1;
+}
+
+.cover {
+  width: 10em;
+  height: 6em;
+  border: 0.1rem solid $primary;
+}
+
+.intro {
+  p {
+    margin: 0 auto;
+    font-size: 0.5em;
+  }
+}
