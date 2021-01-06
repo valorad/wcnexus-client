@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+interface IChapter {
+  name: string,
+  cover: string,
+  description: string,
+}
+
 @Component({
   selector: 'section [CatalogComponent]',
   templateUrl: './catalog.component.html',
@@ -15,48 +21,50 @@ export class CatalogComponent implements OnInit {
     }
   }
 
-  chapters = [
+  chapters: IChapter[] = [
     {
       name: "Welcome",
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        }
-      },
+      cover: "",
+      description: "",
     },
     {
       name: "About me",
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        }
-      },
+      cover: "",
+      description: "",
     },
     {
       name: "About wcn",
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        }
-      },
+      cover: "",
+      description: "",
     },
     {
       name: "Project case",
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        }
-      },
+      cover: "",
+      description: "",
     },
     {
       name: "Thank you",
+      cover: "",
+      description: "",
+    }
+  ];
+
+  chapterToInstance = (chapter: IChapter) => {
+    return {
+      name: chapter.name,
+      image: chapter.cover,
       children: {
         image: {
-          ...this.imageBaseSettings
+          ...this.imageBaseSettings,
+        },
+        title: {
+          styles: {
+            display: "block"
+          }
         }
       },
     }
-  ];
+  };
 
   constructor() { }
 
