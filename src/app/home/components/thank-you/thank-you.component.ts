@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface ISite {
-  title: string,
-  link: string,
-  cover: string,
-}
+import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
 @Component({
   selector: 'section [ThankYouComponent]',
@@ -20,28 +15,37 @@ export class ThankYouComponent implements OnInit {
     }
   }
 
-  sites: ISite[] = [
+  sites: INexus[] = [
     {
-      title: "My Github",
-      link: "https://github.com/valorad",
-      cover: "github-avatar.jpg",
+      dbname: "nexus-mygithub",
+      name: "My Github",
+      description: "My Github",
+      url: "https://github.com/valorad",
+      logo: "github-avatar.jpg",
+      type: "type-site",
     },
     {
-      title: "3yibao",
-      link: "https://www.wcnexus.com/3yibao",
-      cover: "3yibao.jpg",
+      dbname: "nexus-3yibao-react-site",
+      name: "3yibao React",
+      description: "3yibao React",
+      url: "https://www.wcnexus.com/3yibao",
+      logo: "3yibao.jpg",
+      type: "type-site",
     },
     {
-      title: "BillyCDK.dll",
-      link: "https://www.wcnexus.com/bdk",
-      cover: "bdk.jpg",
+      dbname: "nexus-billy-cdk-site",
+      name: "BillyCDK.dll",
+      description: "BillyCDK.dll",
+      url: "https://www.wcnexus.com/bdk",
+      logo: "bdk.jpg",
+      type: "type-site",
     },
   ];
 
-  siteToInstance = (site: ISite) => {
+  siteToInstance = (site: INexus) => {
     return {
-      name: site.title,
-      image: site.cover,
+      name: site.name,
+      image: site.logo,
       children: {
         image: {
           ...this.imageBaseSettings

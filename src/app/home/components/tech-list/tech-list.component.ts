@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface ITechnology {
-  name: string,
-  description: string,
-  cover: string,
-}
+import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
 @Component({
   selector: 'home-tech-list',
@@ -13,22 +8,31 @@ interface ITechnology {
 })
 export class TechListComponent implements OnInit {
 
-  techs: ITechnology[] = [
+  techs: INexus[] = [
     {
+      dbname: "nexus-angular",
       name: "Angular",
       description: "Angular",
-      cover: "angular.jpg",
+      url: "",
+      logo: "angular.jpg",
+      type: "type-technology",
     },
     {
+      dbname: "nexus-dotnet",
       name: ".Net",
       description: ".Net",
-      cover: "dotnet.jpg",
+      url: "",
+      logo: "dotnet.jpg",
+      type: "type-technology",
     },
     {
+      dbname: "nexus-docker",
       name: "Docker",
       description: "Docker",
-      cover: "docker.jpg",
-    }
+      url: "",
+      logo: "docker.jpg",
+      type: "type-technology",
+    },
   ];
 
   coverStyles = {
@@ -36,10 +40,10 @@ export class TechListComponent implements OnInit {
     height: "4em",
   };
 
-  techToInstance = (tech: ITechnology) => {
+  techToInstance = (tech: INexus) => {
     return {
       name: tech.name,
-      image: tech.cover,
+      image: tech.logo,
       children: {
         image: {
           styles: this.coverStyles

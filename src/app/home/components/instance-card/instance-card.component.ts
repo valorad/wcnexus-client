@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IInstanceCardProps } from 'src/app/models/interfaces/props.interface';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 
 @Component({
   selector: 'home-instance-card',

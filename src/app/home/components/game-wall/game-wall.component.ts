@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
-interface IGameProfile {
-  name: string,
-  image: string,
-}
 
 @Component({
   selector: 'home-game-wall',
@@ -12,7 +9,7 @@ interface IGameProfile {
 })
 export class GameWallComponent implements OnInit {
 
-  games: IGameProfile[] = [];
+  games: INexus[] = [];
 
   baseStyle = {
     "background-color": "#1e1e1e",
@@ -20,9 +17,10 @@ export class GameWallComponent implements OnInit {
     height: "3em",
   };
 
-  gameToInstance = (game: IGameProfile) => {
+  gameToInstance = (game: INexus) => {
     return {
-      ...game,
+      name: game.name,
+      image: game.logo,
       children: {
         image: {
           styles: this.baseStyle
@@ -42,8 +40,8 @@ export class GameWallComponent implements OnInit {
       for (let i = 0; i < 30; i++) {
         this.games.push({
         name: `game-${i}`,
-        image: `ag${i}`,
-      });
+        logo: `ag${i}`,
+      } as INexus);
     }
   }
 

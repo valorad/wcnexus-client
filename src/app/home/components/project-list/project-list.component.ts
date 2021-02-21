@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IProject {
-  name: string,
-  description: string,
-  cover: string,
-}
+import { IProject } from 'src/app/models/interfaces/project.interface';
 
 @Component({
   selector: 'home-project-list',
@@ -15,30 +10,80 @@ export class ProjectListComponent implements OnInit {
 
   projects: IProject[] = [
     {
-      name: "smart-eatout",
+      dbname: "smart-eatout",
+      name: "Smart Eat-Out",
       description: "Smart Eat-Out",
-      cover: "",
+      techs: [],
+      url: "",
+      logo: "",
+      type: "type-project",
+      images: [
+        {
+          dbname: "",
+          url: "",
+        }
+      ]
     },
     {
+      dbname: "billy-CDK",
       name: "billy-CDK",
       description: "billy-CDK",
-      cover: "",
+      techs: [],
+      url: "",
+      logo: "",
+      type: "type-project",
+      images: [
+        {
+          dbname: "",
+          url: "",
+        }
+      ]
     },
     {
+      dbname: "voila-CDN",
       name: "voila-CDN",
       description: "voila-CDN",
-      cover: "",
+      techs: [],
+      url: "",
+      logo: "",
+      type: "type-project",
+      images: [
+        {
+          dbname: "",
+          url: "",
+        }
+      ]
     },
     {
+      dbname: "Container-based AutoML",
       name: "Container-based AutoML",
       description: "Container-based AutoML",
-      cover: "",
+      techs: [],
+      url: "",
+      logo: "",
+      type: "type-project",
+      images: [
+        {
+          dbname: "",
+          url: "",
+        }
+      ]
     },
     {
-      name: "3yibao React",
-      description: "3yibao React",
-      cover: "",
-    }
+      dbname: "3yibao-react",
+      name: "3yibao-react",
+      description: "3yibao-react",
+      techs: [],
+      url: "",
+      logo: "",
+      type: "type-project",
+      images: [
+        {
+          dbname: "",
+          url: "",
+        }
+      ]
+    },
   ];
 
   imageBaseSettings = {
@@ -51,7 +96,7 @@ export class ProjectListComponent implements OnInit {
   projectToInstance = (project: IProject) => {
     return {
       name: project.name,
-      image: project.cover,
+      image: project.logo,
       children: {
         image: {
           ...this.imageBaseSettings

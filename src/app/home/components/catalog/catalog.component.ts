@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IChapter {
-  name: string,
-  cover: string,
-  description: string,
-}
+import { IChapter } from '../../../models/interfaces/catalog.interface';
 
 @Component({
   selector: 'section [CatalogComponent]',
