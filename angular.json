@@ -104,7 +104,9 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "wcnexus:build",
-            "port": 38310
+            "port": 4200,
+            "disableHostCheck": true,
+            "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
