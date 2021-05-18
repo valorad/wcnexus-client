@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
 
@@ -17,22 +18,20 @@ export class GameWallComponent implements OnInit {
     height: "3em",
   };
 
-  gameToInstance = (game: INexus) => {
-    return {
-      name: game.name,
-      image: game.logo,
-      children: {
-        image: {
-          styles: this.baseStyle
-        },
-        title: {
-          styles: {
-            display: "none"
-          }
-        }
+  gameToInstance = (game: INexus): IInstanceCardProps => ({
+    name: game.name,
+    image: game.logo,
+    children: {
+      image: {
+        styles: this.baseStyle
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "none"
+        }
+      }
+    },
+  });
 
   constructor() { }
 

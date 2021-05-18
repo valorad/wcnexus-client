@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
 @Component({
@@ -40,22 +41,20 @@ export class TechListComponent implements OnInit {
     height: "4em",
   };
 
-  techToInstance = (tech: INexus) => {
-    return {
-      name: tech.name,
-      image: tech.logo,
-      children: {
-        image: {
-          styles: this.coverStyles
-        },
-        title: {
-          styles: {
-            display: "none"
-          }
-        }
+  techToInstance = (tech: INexus): IInstanceCardProps => ({
+    name: tech.name,
+    image: tech.logo,
+    children: {
+      image: {
+        styles: this.coverStyles
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "none"
+        }
+      }
+    },
+  });
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
 
 @Component({
@@ -42,22 +43,20 @@ export class ThankYouComponent implements OnInit {
     },
   ];
 
-  siteToInstance = (site: INexus) => {
-    return {
-      name: site.name,
-      image: site.logo,
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        },
-        title: {
-          styles: {
-            display: "block"
-          }
-        }
+  siteToInstance = (site: INexus): IInstanceCardProps => ({
+    name: site.name,
+    image: site.logo,
+    children: {
+      image: {
+        ...this.imageBaseSettings
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "block"
+        }
+      }
+    },
+  });
 
   constructor() { }
 

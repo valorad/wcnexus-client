@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { IChapter } from '../../../models/interfaces/catalog.interface';
 
 @Component({
@@ -44,22 +45,21 @@ export class CatalogComponent implements OnInit {
     }
   ];
 
-  chapterToInstance = (chapter: IChapter) => {
-    return {
-      name: chapter.name,
-      image: chapter.cover,
-      children: {
-        image: {
-          ...this.imageBaseSettings,
-        },
-        title: {
-          styles: {
-            display: "block"
-          }
-        }
+  chapterToInstance = (chapter: IChapter): IInstanceCardProps => ({
+    name: chapter.name,
+    image: chapter.cover,
+    children: {
+      image: {
+        ...this.imageBaseSettings,
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "block"
+        }
+      }
+    },
+  });
+
 
   constructor() { }
 

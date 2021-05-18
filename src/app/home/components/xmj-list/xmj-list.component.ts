@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 
 interface IXiaoMaJiaInfo {
   name: string,
@@ -21,21 +22,21 @@ export class XMJListComponent implements OnInit {
     }
   }
 
-  xmjToInstance = (xmj: IXiaoMaJiaInfo) => {
-    return {
-      ...xmj,
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        },
-        title: {
-          styles: {
-            display: "none"
-          }
-        }
+  xmjToInstance = (xmj: IXiaoMaJiaInfo): IInstanceCardProps => ({
+
+    ...xmj,
+    children: {
+      image: {
+        ...this.imageBaseSettings
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "none"
+        }
+      }
+    },
+
+  });
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { IProject } from 'src/app/models/interfaces/project.interface';
 
 @Component({
@@ -93,22 +94,20 @@ export class ProjectListComponent implements OnInit {
     }
   }
 
-  projectToInstance = (project: IProject) => {
-    return {
-      name: project.name,
-      image: project.logo,
-      children: {
-        image: {
-          ...this.imageBaseSettings
-        },
-        title: {
-          styles: {
-            display: "block"
-          }
-        }
+  projectToInstance = (project: IProject): IInstanceCardProps => ({
+    name: project.name,
+    image: project.logo,
+    children: {
+      image: {
+        ...this.imageBaseSettings
       },
-    }
-  };
+      title: {
+        styles: {
+          display: "block"
+        }
+      }
+    },
+  });
 
   constructor() { }
 
