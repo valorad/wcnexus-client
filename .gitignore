@@ -47,6 +47,6 @@ Thumbs.db
 .old/**
 
 # Site
-src/assets/videos/**
+src/statics/**
 
 !readme.*
