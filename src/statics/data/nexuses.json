@@ -1,0 +1,26 @@
+[
+  {
+    "dbname": "nexus-csharp",
+    "name": "C# Language",
+    "description": "One of the language spoken by .Net",
+    "url": "http://asp.net",
+    "logo": "C-well.jpg",
+    "type": "type-technology"
+  },
+  {
+    "dbname": "nexus-java",
+    "name": "Java Language",
+    "description": "Language spoken by Spring eco-system",
+    "url": null,
+    "logo": "java-island.webp",
+    "type": "type-technology"
+  },
+  {
+    "dbname": "nexus-javascript",
+    "name": "JavaScript Language",
+    "description": "Language spoken by all browsers + node eco-system",
+    "url": null,
+    "logo": "java-scripter.gif",
+    "type": "type-technology"
+  }
+]

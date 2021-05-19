@@ -49,4 +49,7 @@ Thumbs.db
 # Site
 src/statics/**
 
+!src/statics/data
+!src/statics/data/**
+
 !readme.*

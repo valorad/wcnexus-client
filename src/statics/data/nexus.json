@@ -1,0 +1,8 @@
+{
+  "dbname": "nexus-central",
+  "name": "Central Nexus",
+  "description": "This is the central nexus",
+  "url": null,
+  "logo": null,
+  "type": "type-testdata"
+}
