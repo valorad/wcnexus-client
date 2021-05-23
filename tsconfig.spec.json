@@ -6,7 +6,7 @@
     "types": [
       "jest"
     ],
-    "esModuleInterop": true
+    "esModuleInterop": false
   },
   "files": [
     "src/polyfills.ts"

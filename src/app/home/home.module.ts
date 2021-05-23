@@ -18,6 +18,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { TextDisplayComponent } from './components/text-display/text-display.component';
 import { DialogSlotComponent } from './components/dialog-slot/dialog-slot.component';
+import { MarkDownDisplayComponent } from './components/markdown-display/markdown-display.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { DialogSlotComponent } from './components/dialog-slot/dialog-slot.compon
     CatalogComponent,
     TextDisplayComponent,
     DialogSlotComponent,
+    MarkDownDisplayComponent,
   ],
   imports: [
     CommonModule,

@@ -17,18 +17,20 @@ export class TextDisplayComponent implements OnInit {
 
   @Input()
   public set TextDisplayProps(v: Partial<ITextDisplayProps>) {
+    
     this._textDisplayProps = v;
-    if (v.content) {
-      
-      if (v.throttle && v.content.length > v.throttle) {
-        this.displayContent = `${v.content.substring(0, v.throttle)}...`;
-      } else {
-        this.displayContent = v.content;
-      }
 
-    } else {
-      this.displayContent = "No content to show...";
+    if (!v.content) {
+      this.displayContent = "(No content to show...)";
+      return;
     }
+
+    if (v.throttle && v.content.length > v.throttle) {
+      this.displayContent = `${v.content.substring(0, v.throttle)}...`;
+    } else {
+      this.displayContent = v.content;
+    }
+
   }
   
 

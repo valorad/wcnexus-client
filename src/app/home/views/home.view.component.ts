@@ -5,6 +5,7 @@ import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 import { NexusService } from 'src/app/services/nexus.service';
 import MicroModal from 'micromodal';
 import textGopibutong from 'src/statics/data/Misc/text-gopibutong';
+import textMarkdown from 'src/statics/data/Misc/text-markdown';
 
 @Component({
   selector: 'app-home-view',
@@ -19,6 +20,11 @@ export class HomeViewComponent implements OnInit {
 
   textDisplayTestContent = {
     content: textGopibutong.text
+  };
+
+  markdownDisplayProps = {
+    content: textMarkdown,
+    throttle: 3
   };
 
   textDialogProps = {
