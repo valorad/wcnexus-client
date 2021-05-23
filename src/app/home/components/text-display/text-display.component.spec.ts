@@ -27,24 +27,31 @@ describe("Text Display test", () => {
   }));
 
   test('Passing data', () => {
-    const props = {
-      content: textGopibutong.text,
+
+    // test long texts
+    const longText = textGopibutong.text;
+    const article = element.querySelector(".mainText") as HTMLDivElement;
+
+    component.TextDisplayProps = {
+      content: longText,
       throttle: 60,
     };
 
-    const article = element.querySelector(".mainText") as HTMLDivElement;
-
-    component.TextDisplayProps = props;
     fixture.detectChanges();
 
-    const expectedResult = `${props.content.substring(0, props.throttle)}...`
+    const expectedResult = `${longText.substring(0, component.TextDisplayProps.throttle)}...`
 
     expect(article.textContent).toContain(expectedResult);
 
-    props.content = "Short little text."
+    // test short texts
+    const shortText = "Short little text";
+    component.TextDisplayProps = {
+      ...component.TextDisplayProps,
+      content: shortText,
+    };
     fixture.detectChanges();
     
-    const shortTextExpectedResult = props.content;
+    const shortTextExpectedResult = shortText;
 
     expect(article.textContent).toContain(shortTextExpectedResult);
 

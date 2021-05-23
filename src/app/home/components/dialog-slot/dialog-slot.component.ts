@@ -14,7 +14,7 @@ export class DialogSlotComponent implements OnInit {
   dialogID = "";
 
   private _dialogProps: Partial<IDialogProps> = {};
-  public get value(): Partial<IDialogProps> {
+  public get DialogProps(): Partial<IDialogProps> {
     return this._dialogProps;
   }
 

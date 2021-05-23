@@ -8,7 +8,29 @@ import { ITextDisplayProps } from 'src/app/models/interfaces/text-display.interf
 })
 export class TextDisplayComponent implements OnInit {
 
-  @Input() TextDisplayProps! : Partial<ITextDisplayProps>
+  displayContent = "";
+
+  private _textDisplayProps: Partial<ITextDisplayProps> = {};
+  public get TextDisplayProps(): Partial<ITextDisplayProps> {
+    return this._textDisplayProps;
+  }
+
+  @Input()
+  public set TextDisplayProps(v: Partial<ITextDisplayProps>) {
+    this._textDisplayProps = v;
+    if (v.content) {
+      
+      if (v.throttle && v.content.length > v.throttle) {
+        this.displayContent = `${v.content.substring(0, v.throttle)}...`;
+      } else {
+        this.displayContent = v.content;
+      }
+
+    } else {
+      this.displayContent = "No content to show...";
+    }
+  }
+  
 
   constructor() { }
 
