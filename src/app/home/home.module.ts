@@ -16,6 +16,8 @@ import { InstanceCardComponent } from './components/instance-card/instance-card.
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
+import { TextDisplayComponent } from './components/text-display/text-display.component';
+import { DialogSlotComponent } from './components/dialog-slot/dialog-slot.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     InstanceCardComponent,
     ProjectDetailComponent,
     ProjectListComponent,
-    CatalogComponent
+    CatalogComponent,
+    TextDisplayComponent,
+    DialogSlotComponent,
   ],
   imports: [
     CommonModule,

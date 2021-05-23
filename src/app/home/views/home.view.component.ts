@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import Reveal from "reveal.js";
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
+import { NexusService } from 'src/app/services/nexus.service';
+import MicroModal from 'micromodal';
+import textGopibutong from 'src/statics/data/Misc/text-gopibutong';
 
 @Component({
   selector: 'app-home-view',
@@ -14,7 +17,22 @@ export class HomeViewComponent implements OnInit {
   isIMGShown = false;
   isLiuPPTShown = false;
 
-  constructor() { }
+  textDisplayTestContent = {
+    content: textGopibutong.text
+  };
+
+  textDialogProps = {
+    id: "texttest",
+    title: "Text Dialog"
+  }
+
+  constructor(
+    private nexusService: NexusService
+  ) { }
+
+  onDialogBtnClick = (e: Event) => {
+    MicroModal.show('dialog-texttest');
+  };
 
   onNumpadClicked = (e: Event) => {
     this.addNum();
@@ -36,6 +54,10 @@ export class HomeViewComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.nexusService.getSingle("nexus-central")
+      .subscribe(res => {
+        console.log(res);
+      });
   }
 
   ngAfterViewInit() {

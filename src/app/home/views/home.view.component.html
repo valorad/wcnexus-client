@@ -1,6 +1,14 @@
 <section class="HomeView">
+  <!-- All modals go here, because they have to be put at the very top -->
+  <home-dialog-slot [DialogProps]="textDialogProps">
+    <home-text-display dialogContent [TextDisplayProps]="textDisplayTestContent"></home-text-display>
+  </home-dialog-slot>
   <div class="reveal">
     <div class="slides">
+
+      <section class="testppt">
+        <button (click)="onDialogBtnClick($event)">Show Dialog</button>
+      </section>
 
       <section
         SlideCoverComponent
