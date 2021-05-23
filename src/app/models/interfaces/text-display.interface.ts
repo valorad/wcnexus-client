@@ -1,3 +1,4 @@
 export interface ITextDisplayProps {
-  content: string
+  content: string,
+  throttle: number,
 }

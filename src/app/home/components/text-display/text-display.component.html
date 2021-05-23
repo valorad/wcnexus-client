@@ -1,5 +1,5 @@
-<div class="TextDisplay">
-  <article>
-    {{ TextDisplayProps?.content || "No content to show..." }}
+<div class="textDisplay">
+  <article class="mainText">
+    {{ (TextDisplayProps?.content | slice:0:60) || "No content to show..." }}<ng-container *ngIf="TextDisplayProps?.content.length > 60">...</ng-container>
   </article>
 </div>
