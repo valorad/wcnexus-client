@@ -1,8 +1,8 @@
 <div class="instanceCard">
-  <picture [ngStyle]="InstanceCardProps?.children?.image?.styles || null">
+  <picture [ngStyle]="InstanceCardProps?.styles?.image || null">
     {{ InstanceCardProps?.image }}
   </picture>
-  <div class="nameBox flexCenter" [ngStyle]="InstanceCardProps?.children?.title?.styles || null">
+  <div class="nameBox flexCenter" [ngStyle]="InstanceCardProps?.styles?.title || null">
     <h3>{{ InstanceCardProps?.name }}</h3>
   </div>
 </div>

@@ -44,14 +44,10 @@ export class TechListComponent implements OnInit {
   techToInstance = (tech: INexus): IInstanceCardProps => ({
     name: tech.name,
     image: tech.logo,
-    children: {
-      image: {
-        styles: this.coverStyles
-      },
+    styles: {
+      image: this.coverStyles,
       title: {
-        styles: {
-          display: "none"
-        }
+        display: "none"
       }
     },
   });

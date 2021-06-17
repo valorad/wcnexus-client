@@ -10,10 +10,8 @@ import { INexus } from 'src/app/models/interfaces/nexus.interface';
 export class ThankYouComponent implements OnInit {
 
   imageBaseSettings = {
-    styles: {
-      width: "6em",
-      height: "3em",
-    }
+    width: "6em",
+    height: "3em",
   }
 
   sites: INexus[] = [
@@ -46,14 +44,12 @@ export class ThankYouComponent implements OnInit {
   siteToInstance = (site: INexus): IInstanceCardProps => ({
     name: site.name,
     image: site.logo,
-    children: {
+    styles: {
       image: {
         ...this.imageBaseSettings
       },
       title: {
-        styles: {
-          display: "block"
-        }
+        display: "block"
       }
     },
   });

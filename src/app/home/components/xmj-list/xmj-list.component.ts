@@ -12,23 +12,19 @@ export class XMJListComponent implements OnInit {
   @Input() XMJListProps! : Partial<IXMJListProps>
 
   imageBaseSettings = {
-    styles: {
-      width: "4em",
-      height: "4em",
-    }
+    width: "4em",
+    height: "4em",
   }
 
   xmjToInstance = (xmj: IXiaoMaJia): IInstanceCardProps => ({
 
     ...xmj,
-    children: {
+    styles: {
       image: {
         ...this.imageBaseSettings
       },
       title: {
-        styles: {
-          display: "none"
-        }
+        display: "none"
       }
     },
 

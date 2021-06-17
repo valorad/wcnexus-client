@@ -21,16 +21,12 @@ export class GameWallComponent implements OnInit {
   gameToInstance = (game: INexus): IInstanceCardProps => ({
     name: game.name,
     image: game.logo,
-    children: {
-      image: {
-        styles: this.baseStyle
-      },
+    styles: {
+      image: this.baseStyle,
       title: {
-        styles: {
-          display: "none"
-        }
+        display: "none",
       }
-    },
+    }
   });
 
   constructor() { }

@@ -29,12 +29,10 @@ describe("Instance card test", () => {
     const props = {
       image: "test.jpg",
       name: "Awesome card",
-      children: {
+      styles: {
         image: {
-          styles: {
-            height: "3em",
-            width: "3em",
-          }
+          height: "3em",
+          width: "3em",
         }
       }
     };

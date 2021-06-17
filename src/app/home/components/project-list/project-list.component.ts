@@ -88,23 +88,19 @@ export class ProjectListComponent implements OnInit {
   ];
 
   imageBaseSettings = {
-    styles: {
-      width: "6em",
-      height: "3em",
-    }
+    width: "6em",
+    height: "3em",
   }
 
   projectToInstance = (project: IProject): IInstanceCardProps => ({
     name: project.name,
     image: project.logo,
-    children: {
+    styles: {
       image: {
         ...this.imageBaseSettings
       },
       title: {
-        styles: {
-          display: "block"
-        }
+        display: "block"
       }
     },
   });

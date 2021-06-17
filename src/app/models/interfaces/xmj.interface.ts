@@ -1,4 +1,6 @@
-export interface IXMJListProps {
+import { ICommomProps } from "./common-props.interface";
+
+export interface IXMJListProps extends ICommomProps {
   xiaoMaJias: IXiaoMaJia[]
 }
 

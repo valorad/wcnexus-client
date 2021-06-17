@@ -10,11 +10,9 @@ import { IChapter } from '../../../models/interfaces/catalog.interface';
 export class CatalogComponent implements OnInit {
 
   imageBaseSettings = {
-    styles: {
-      width: "6em",
-      height: "3em",
-      display: "block",
-    }
+    width: "6em",
+    height: "3em",
+    display: "block",
   }
 
   chapters: IChapter[] = [
@@ -48,16 +46,14 @@ export class CatalogComponent implements OnInit {
   chapterToInstance = (chapter: IChapter): IInstanceCardProps => ({
     name: chapter.name,
     image: chapter.cover,
-    children: {
+    styles: {
       image: {
         ...this.imageBaseSettings,
       },
       title: {
-        styles: {
-          display: "block"
-        }
+        display: "block"
       }
-    },
+    }
   });
 
 

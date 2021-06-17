@@ -1,16 +1,11 @@
-import { IChildElementStore, IElementStyleStore } from './element.interface';
+import { ICommomProps } from './common-props.interface';
+import { IElementStyleStore } from './element.interface';
 
-export interface IInstanceCardProps {
+export interface IInstanceCardProps extends ICommomProps {
   image: string,
   name: string,
-  children: Partial<IInstanceCardChildren>,
-}
-
-export interface IInstanceCardChildren extends IChildElementStore {
-  image: {
-    styles: IElementStyleStore
-  },
-  title: {
-    styles: IElementStyleStore
+  styles: {
+    image?: IElementStyleStore,
+    title?: IElementStyleStore,
   }
 }
