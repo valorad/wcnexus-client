@@ -1,6 +1,6 @@
 <div class="techList">
-  <ul>
-    <li *ngFor="let tech of techs">
+  <ul class="techListHolder">
+    <li *ngFor="let tech of TechListProps?.techs">
       <home-instance-card
         [InstanceCardProps]="techToInstance(tech)"
       ></home-instance-card>
