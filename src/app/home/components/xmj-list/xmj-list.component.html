@@ -1,6 +1,6 @@
 <div class="xmjList flexCenter">
-  <ul>
-    <li *ngFor="let xmj of xiaoMaJias">
+  <ul class="xmjHolder">
+    <li *ngFor="let xmj of XMJListProps.xiaoMaJias">
       <home-instance-card
         [InstanceCardProps]="xmjToInstance(xmj)"
       ></home-instance-card>

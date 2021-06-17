@@ -6,6 +6,7 @@ import { NexusService } from 'src/app/services/nexus.service';
 import MicroModal from 'micromodal';
 import textGopibutong from 'src/statics/data/Misc/text-gopibutong';
 import textMarkdown from 'src/statics/data/Misc/text-markdown';
+import { IAboutMeProps } from 'src/app/models/interfaces/about-me.interface';
 
 @Component({
   selector: 'app-home-view',
@@ -13,6 +14,14 @@ import textMarkdown from 'src/statics/data/Misc/text-markdown';
   styleUrls: ['./home.view.component.scss']
 })
 export class HomeViewComponent implements OnInit {
+
+  aboutMeProps: IAboutMeProps = {
+    children: {
+      xmjList: {
+        xiaoMaJias: []
+      }
+    }
+  }
 
   num = 0;
   isIMGShown = false;
@@ -60,6 +69,15 @@ export class HomeViewComponent implements OnInit {
   };
 
   ngOnInit(): void {
+
+    // populate xmj list data
+    for (let i = 0; i < 6; i++) {
+      this.aboutMeProps.children.xmjList.xiaoMaJias.push({
+        name: `xmj-${i}`,
+        image: `avt-${i}.jpg`,
+      });
+    }
+
     this.nexusService.getSingle("nexus-central")
       .subscribe(res => {
         console.log(res);

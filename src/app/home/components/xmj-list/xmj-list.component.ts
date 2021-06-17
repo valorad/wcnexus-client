@@ -1,10 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
-
-interface IXiaoMaJiaInfo {
-  name: string,
-  image: string,
-}
+import { IXiaoMaJia, IXMJListProps } from 'src/app/models/interfaces/xmj.interface';
 
 @Component({
   selector: 'home-xmj-list',
@@ -13,7 +9,7 @@ interface IXiaoMaJiaInfo {
 })
 export class XMJListComponent implements OnInit {
 
-  xiaoMaJias: IXiaoMaJiaInfo[] = [];
+  @Input() XMJListProps! : Partial<IXMJListProps>
 
   imageBaseSettings = {
     styles: {
@@ -22,7 +18,7 @@ export class XMJListComponent implements OnInit {
     }
   }
 
-  xmjToInstance = (xmj: IXiaoMaJiaInfo): IInstanceCardProps => ({
+  xmjToInstance = (xmj: IXiaoMaJia): IInstanceCardProps => ({
 
     ...xmj,
     children: {
@@ -41,12 +37,7 @@ export class XMJListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < 6; i++) {
-      this.xiaoMaJias.push({
-        name: `xmj-${i}`,
-        image: `avt-${i}.jpg`,
-      });
-    }
+
   }
 
 }
