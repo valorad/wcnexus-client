@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import textGopibutong from "../../../../statics/data/Misc/text-gopibutong";
+import textGopibutong from "src/statics/data/Misc/text-gopibutong";
 import { TextDisplayComponent } from './text-display.component';
 
 

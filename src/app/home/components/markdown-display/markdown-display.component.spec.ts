@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import textMarkdown from "../../../../statics/data/Misc/text-markdown";
+import textMarkdown from "src/statics/data/Misc/text-markdown";
 import { MarkDownDisplayComponent } from './markdown-display.component';
 
 
