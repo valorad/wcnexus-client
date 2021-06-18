@@ -1,3 +1,5 @@
+import Reveal from "reveal.js";
+
 import { Component, OnInit } from '@angular/core';
 import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { IChapter } from '../../../models/interfaces/catalog.interface';
@@ -17,34 +19,44 @@ export class CatalogComponent implements OnInit {
 
   chapters: IChapter[] = [
     {
-      name: "Welcome",
+      name: "welcome",
+      title: "Welcome",
       cover: "",
       description: "",
+      index: 0,
     },
     {
-      name: "About me",
+      name: "about-me",
+      title: "About me",
       cover: "",
       description: "",
+      index: 3,
     },
     {
-      name: "About wcn",
+      name: "about-wcn",
+      title: "About wcn",
       cover: "",
       description: "",
+      index: 4,
     },
     {
-      name: "Project case",
+      name: "project-case",
+      title: "Project case",
       cover: "",
       description: "",
+      index: 5,
     },
     {
-      name: "Thank you",
+      name: "thank-you",
+      title: "Thank you",
       cover: "",
       description: "",
+      index: 6,
     }
   ];
 
   chapterToInstance = (chapter: IChapter): IInstanceCardProps => ({
-    name: chapter.name,
+    name: chapter.title,
     image: chapter.cover,
     styles: {
       image: {
@@ -56,10 +68,16 @@ export class CatalogComponent implements OnInit {
     }
   });
 
+  navigateTo = (targetSlideIndex: number) => {  
+    Reveal.slide(targetSlideIndex, 0);
+  };
 
   constructor() { }
 
   ngOnInit(): void {
+
+    // Cannot get slides index. Reveal instance is different. cannot do it unless using ngrx store.
+
   }
 
 }

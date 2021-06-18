@@ -45,9 +45,17 @@ export class HomeViewComponent implements OnInit {
     private nexusService: NexusService
   ) { }
 
-  onDialogBtnClick = (e: Event) => {
-    MicroModal.show('dialog-texttest');
-  };
+  // onDialogBtnClick = (e: Event) => {
+  //   MicroModal.show('dialog-texttest');
+
+  //   const slides: HTMLDivElement[] = Reveal.getSlides();
+
+  //   const testppt = slides.find(ele => ele.dataset.name === 'testppt123');
+
+  //   console.log(slides);
+    
+  //   console.dir(testppt);
+  // };
 
   onNumpadClicked = (e: Event) => {
     this.addNum();

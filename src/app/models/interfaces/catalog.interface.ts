@@ -1,5 +1,7 @@
 export interface IChapter {
-  name: string;
-  cover: string;
-  description: string;
+  name: string,
+  title: string,
+  cover: string,
+  description: string,
+  index: number,
 }

@@ -7,10 +7,6 @@
   <div class="reveal">
     <div class="slides">
 
-      <section class="testppt">
-        <button (click)="onDialogBtnClick($event)">Show Dialog</button>
-      </section>
-
       <section
         SlideCoverComponent
         data-transition="slide-in fade-out"
@@ -18,12 +14,14 @@
         data-background-video-loop
         data-background-video-muted
         data-background-opacity="0.9"
+        data-name="cover"
       ></section>  <!-- This is an ng component!! -->
 
       <section
         WelcomeComponent
         data-transition="fade-in fade-out"
         data-background-color="#262626"
+        data-name="welcome"
       ></section>  <!-- This is an ng component!! -->
 
       <section
@@ -34,18 +32,22 @@
       <section
         AboutMeComponent
         [AboutMeProps]="aboutMeProps"
+        data-name="about-me"
       ></section>  <!-- This is an ng component!! -->
 
       <section
         AboutSiteComponent
+        data-name="about-wcn"
       ></section>  <!-- This is an ng component!! -->
 
       <section
         ProjectCaseComponent
+        data-name="project-case"
       ></section>  <!-- This is an ng component!! -->
 
       <section
         ThankYouComponent
+        data-name="thank-you"
       ></section>  <!-- This is an ng component!! -->
 
       <section>
@@ -76,6 +78,13 @@
           ```
         </textarea>
       </section>
+
+      <!-- <section class="testppt" data-name="testppt123">
+        <button (click)="onDialogBtnClick($event)">Show Dialog</button>
+      </section> -->
+
+
+
     </div>
   </div>
 
