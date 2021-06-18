@@ -4,6 +4,22 @@
     <!-- <home-text-display dialogContent [TextDisplayProps]="textDisplayTestContent"></home-text-display> -->
     <home-markdown-display dialogContent [MarkdownDisplayProps]="markdownDisplayProps"></home-markdown-display>
   </home-dialog-slot>
+
+  <aside>
+    <ul>
+      <li>
+        <button class="toc" title="Table of Contents" (click)="navigateTo(2)">
+          <i class="iconfont icon-catalog"></i>
+        </button>
+      </li>
+      <li>
+        <a href="https://github.com/valorad/wcnexus.com" target="_blank" rel="noopener noreferrer">
+          <i class="iconfont icon-github"></i>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
   <div class="reveal">
     <div class="slides">
 
@@ -78,12 +94,6 @@
           ```
         </textarea>
       </section>
-
-      <!-- <section class="testppt" data-name="testppt123">
-        <button (click)="onDialogBtnClick($event)">Show Dialog</button>
-      </section> -->
-
-
 
     </div>
   </div>

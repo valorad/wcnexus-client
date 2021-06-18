@@ -1,4 +1,48 @@
 section.HomeView {
   width: 100vw;
   height: 100vh;
+  position: relative;
+
+  aside {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      margin: 0.5em;
+    }
+
+  }
+
+  .toc {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .iconfont {
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .icon-catalog {
+    font-size: 3em;
+  }
+
+  .icon-github {
+    font-size: 2.4em;
+  }
+
 }
+

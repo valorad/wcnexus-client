@@ -41,21 +41,13 @@ export class HomeViewComponent implements OnInit {
     title: "Text Dialog"
   }
 
+  navigateTo = (targetSlideIndex: number) => {  
+    Reveal.slide(targetSlideIndex, 0);
+  };
+
   constructor(
     private nexusService: NexusService
   ) { }
-
-  // onDialogBtnClick = (e: Event) => {
-  //   MicroModal.show('dialog-texttest');
-
-  //   const slides: HTMLDivElement[] = Reveal.getSlides();
-
-  //   const testppt = slides.find(ele => ele.dataset.name === 'testppt123');
-
-  //   console.log(slides);
-    
-  //   console.dir(testppt);
-  // };
 
   onNumpadClicked = (e: Event) => {
     this.addNum();
