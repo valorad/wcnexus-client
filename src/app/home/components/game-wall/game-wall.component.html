@@ -1,6 +1,6 @@
 <div class="gameAvatars flexCenter">
   <home-instance-card
-    *ngFor="let game of games"
+    *ngFor="let game of GameWallProps?.games"
     [InstanceCardProps]="gameToInstance(game)"
   ></home-instance-card>
 </div>

@@ -3,12 +3,12 @@ import Reveal from "reveal.js";
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 import { NexusService } from 'src/app/services/nexus.service';
-import MicroModal from 'micromodal';
 import textGopibutong from 'src/statics/data/Misc/text-gopibutong';
 import textMarkdown from 'src/statics/data/Misc/text-markdown';
 import { IAboutMeProps } from 'src/app/models/interfaces/about-me.interface';
 import { IThankYouProps } from 'src/app/models/interfaces/thank-you.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
+import { IWelcomeProps } from 'src/app/models/interfaces/welcome.interface';
 
 @Component({
   selector: 'app-home-view',
@@ -58,7 +58,7 @@ export class HomeViewComponent implements OnInit {
         xiaoMaJias: []
       }
     }
-  }
+  };
 
   thankYouProps: IThankYouProps = {
     nextSites: [
@@ -88,7 +88,15 @@ export class HomeViewComponent implements OnInit {
       },
     ],
     socialMedia: this.socialMedia,
-  }
+  };
+
+  welcomeProps: IWelcomeProps = {
+    children: {
+      gameWall: {
+        games: []
+      }
+    }
+  };
 
   num = 0;
   isIMGShown = false;
@@ -143,6 +151,17 @@ export class HomeViewComponent implements OnInit {
         name: `xmj-${i}`,
         image: `avt-${i}.jpg`,
       });
+    }
+
+    // populate game wall data
+    for (let i = 0; i < 30; i++) {
+      this.welcomeProps.children.gameWall.games.push(
+        {
+          name: `game-${i}`,
+          logo: `ag${i}`,
+          type: "type-game",
+        } as INexus
+      );
     }
 
     this.nexusService.getSingle("nexus-central")

@@ -4,7 +4,7 @@
 
     <div>
       <!-- use a div wrapper to hack as a slide background -->
-      <home-game-wall></home-game-wall>
+      <home-game-wall [GameWallProps]="WelcomeProps?.children?.gameWall || {}"></home-game-wall>
     </div>
 
     <!-- To make the 1st fragment appear at start:  -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IWelcomeProps } from 'src/app/models/interfaces/welcome.interface';
 
 @Component({
   selector: 'section [WelcomeComponent]',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
+
+  @Input() WelcomeProps! : Partial<IWelcomeProps>
 
   constructor() { }
 
