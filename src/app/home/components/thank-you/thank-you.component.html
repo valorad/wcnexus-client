@@ -2,15 +2,19 @@
   <h2>Thank you!</h2>
   <p>Thanks for visiting my site!</p>
   <p>You may continue to visit the following sites</p>
-  <ul>
-    <li *ngFor="let site of sites">
+  <ul class="nextSites">
+    <li *ngFor="let site of ThankYouProps?.nextSites">
       <home-instance-card
         [InstanceCardProps]="siteToInstance(site)"
       ></home-instance-card>
     </li>
   </ul>
-  <p>Also please consider following me on Twitter, Weibo, Zhihu, Github and other social media!</p>
   <footer>
-    © 2017 - 2021 Chenxuan Wang (Valorad the Oneiroseeker) weibo zhihu twitter github
+    © 2017 - 2021 Chenxuan Wang (Valorad the Oneiroseeker)
+    <span class="social" *ngFor="let medium of ThankYouProps?.socialMedia">
+      <a [href]="medium.url" target="_blank" rel="noopener noreferrer">
+        <i [title]="medium.name">{{ medium.logo }}</i>
+      </a>
+    </span>
   </footer>
 </section>

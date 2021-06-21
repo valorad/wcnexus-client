@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IInstanceCardProps } from 'src/app/models/interfaces/instantcard.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
+import { IThankYouProps } from 'src/app/models/interfaces/thank-you.interface';
 
 @Component({
   selector: 'section [ThankYouComponent]',
@@ -9,37 +10,12 @@ import { INexus } from 'src/app/models/interfaces/nexus.interface';
 })
 export class ThankYouComponent implements OnInit {
 
+  @Input() ThankYouProps! : Partial<IThankYouProps>
+
   imageBaseSettings = {
     width: "6em",
     height: "3em",
   }
-
-  sites: INexus[] = [
-    {
-      dbname: "nexus-mygithub",
-      name: "My Github",
-      description: "My Github",
-      url: "https://github.com/valorad",
-      logo: "github-avatar.jpg",
-      type: "type-site",
-    },
-    {
-      dbname: "nexus-3yibao-react-site",
-      name: "3yibao React",
-      description: "3yibao React",
-      url: "https://www.wcnexus.com/3yibao",
-      logo: "3yibao.jpg",
-      type: "type-site",
-    },
-    {
-      dbname: "nexus-billy-cdk-site",
-      name: "BillyCDK.dll",
-      description: "BillyCDK.dll",
-      url: "https://www.wcnexus.com/bdk",
-      logo: "bdk.jpg",
-      type: "type-site",
-    },
-  ];
 
   siteToInstance = (site: INexus): IInstanceCardProps => ({
     name: site.name,
