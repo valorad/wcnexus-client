@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProjectCaseProps } from 'src/app/models/interfaces/project.interface';
 
 @Component({
   selector: 'section [ProjectCaseComponent]',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-case.component.scss']
 })
 export class ProjectCaseComponent implements OnInit {
+
+  @Input() ProjectCaseProps! : Partial<IProjectCaseProps>
 
   constructor() { }
 

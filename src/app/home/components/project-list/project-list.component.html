@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let project of projects">
+<ul class="projectListHolder">
+  <li *ngFor="let project of ProjectListProps?.projects">
     <home-instance-card [InstanceCardProps]="projectToInstance(project)"></home-instance-card>
   </li>
 </ul>

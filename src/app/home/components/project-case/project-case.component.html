@@ -1,12 +1,10 @@
 <section>
 
-
-
   <div class="r-stack">
 
     <div class="backdrop">
       <h2>Project Case</h2>
-      <home-project-list></home-project-list>
+      <home-project-list [ProjectListProps]="ProjectCaseProps?.children?.projectList || {}"></home-project-list>
     </div>
 
     <div class="fragment fade-out projectIntro flexCenter" data-fragment-index="0" > 
@@ -15,8 +13,6 @@
 
   </div>
 
-
-  
   
 </section>
 

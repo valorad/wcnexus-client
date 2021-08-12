@@ -9,6 +9,7 @@ import { IAboutMeProps } from 'src/app/models/interfaces/about-me.interface';
 import { IThankYouProps } from 'src/app/models/interfaces/thank-you.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
 import { IWelcomeProps } from 'src/app/models/interfaces/welcome.interface';
+import { IProjectCaseProps, IProjectListProps } from 'src/app/models/interfaces/project.interface';
 
 @Component({
   selector: 'app-home-view',
@@ -97,6 +98,90 @@ export class HomeViewComponent implements OnInit {
       }
     }
   };
+
+  projectCaseProps: IProjectCaseProps = {
+    children: {
+      projectList: {
+        projects: [
+          {
+            dbname: "smart-eatout",
+            name: "Smart Eat-Out",
+            description: "Smart Eat-Out",
+            techs: [],
+            url: "",
+            logo: "",
+            type: "type-project",
+            images: [
+              {
+                dbname: "",
+                url: "",
+              }
+            ]
+          },
+          {
+            dbname: "billy-CDK",
+            name: "billy-CDK",
+            description: "billy-CDK",
+            techs: [],
+            url: "",
+            logo: "",
+            type: "type-project",
+            images: [
+              {
+                dbname: "",
+                url: "",
+              }
+            ]
+          },
+          {
+            dbname: "voila-CDN",
+            name: "voila-CDN",
+            description: "voila-CDN",
+            techs: [],
+            url: "",
+            logo: "",
+            type: "type-project",
+            images: [
+              {
+                dbname: "",
+                url: "",
+              }
+            ]
+          },
+          {
+            dbname: "Container-based AutoML",
+            name: "Container-based AutoML",
+            description: "Container-based AutoML",
+            techs: [],
+            url: "",
+            logo: "",
+            type: "type-project",
+            images: [
+              {
+                dbname: "",
+                url: "",
+              }
+            ]
+          },
+          {
+            dbname: "3yibao-react",
+            name: "3yibao-react",
+            description: "3yibao-react",
+            techs: [],
+            url: "",
+            logo: "",
+            type: "type-project",
+            images: [
+              {
+                dbname: "",
+                url: "",
+              }
+            ]
+          },
+        ]
+      }
+    }
+  }
 
   num = 0;
   isIMGShown = false;
