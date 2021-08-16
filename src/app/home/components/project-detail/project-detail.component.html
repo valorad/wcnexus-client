@@ -1,29 +1,34 @@
 <div class="projectDetail">
-  <div class="leftAside">
-    <div class="cover">
-      <h3>Project name</h3>
+
+  <ng-container
+    *ngIf="ProjectDetailProps?.project; then hasData; else noData">
+  ></ng-container>
+
+  <ng-template #hasData>
+
+    <div class="carousel">
+      carousel img
+      <h3>{{ ProjectDetailProps.project?.name }}</h3>
     </div>
-    <div class="intro">
-      <h4>Intro</h4>
+  
+    <div class="techs">
+      <home-tech-list [TechListProps]="ProjectDetailProps.children?.techList || {}"></home-tech-list>
+    </div>
+  
+    <div class="description" (click)="onDescriptionClick($event)">
       <article>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>- This is a very nice project​</p>
-        <p>...​</p>
+        <home-markdown-display [MarkdownDisplayProps]="{content: ProjectDetailProps.project?.description, throttle: 3}"></home-markdown-display>
       </article>
     </div>
-  </div>
-  <div class="rightAside">
-    <div class="techs">
-      <h4>Technologies</h4>
-      <home-tech-list></home-tech-list>
-    </div>
-    <div class="galary">
-      <h4>Galary</h4>
-    </div>
-  </div>
+
+  </ng-template>
+
+  <ng-template #noData>
+    <h1>Unable to find this project.</h1>
+  </ng-template>
+
+  <home-dialog-slot [DialogProps]="{id: 'project-description-' + ProjectDetailProps.project?.dbname || projectUUID, title: 'Project Description'}">
+    <home-markdown-display dialogContent [MarkdownDisplayProps]="{content: ProjectDetailProps.project?.description}"></home-markdown-display>
+  </home-dialog-slot>
+
 </div>

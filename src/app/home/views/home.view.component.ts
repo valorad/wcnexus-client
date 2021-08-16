@@ -9,7 +9,7 @@ import { IAboutMeProps } from 'src/app/models/interfaces/about-me.interface';
 import { IThankYouProps } from 'src/app/models/interfaces/thank-you.interface';
 import { INexus } from 'src/app/models/interfaces/nexus.interface';
 import { IWelcomeProps } from 'src/app/models/interfaces/welcome.interface';
-import { IProjectCaseProps, IProjectListProps } from 'src/app/models/interfaces/project.interface';
+import { IProjectCaseProps } from 'src/app/models/interfaces/project.interface';
 
 @Component({
   selector: 'app-home-view',

@@ -12,19 +12,22 @@ export class TechListComponent implements OnInit {
 
   @Input() TechListProps! : Partial<ITechListProps>
 
-  coverStyles = {
-    width: "4em",
-    height: "4em",
-  };
+  coverStyles0 = {
+    image: {
+      width: "4em",
+      height: "4em",
+    },
+    title: {
+      display: "none"
+    }
+  }
 
   techToInstance = (tech: INexus): IInstanceCardProps => ({
     name: tech.name,
     image: tech.logo,
     styles: {
-      image: this.coverStyles,
-      title: {
-        display: "none"
-      }
+      ...this.coverStyles0,
+      ...this.TechListProps?.cardStyle
     },
   });
 

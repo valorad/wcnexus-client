@@ -1,30 +1,29 @@
 @import "src/theme";
 
-.projectDetail {
+.techs {
   display: flex;
-  flex-wrap: nowrap;
-  h3, h4 {
-    text-transform: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  border: 2px solid $primary;
+
+  article {
+    font-size: 0.5em;
+    overflow: hidden;
+    height: 6em;
+    cursor: pointer;
   }
-}
 
-.leftAside {
-  flex-grow: 1;
-}
-
-.rightAside {
-  flex-grow: 1;
-}
-
-.cover {
-  width: 10em;
-  height: 6em;
-  border: 0.1rem solid $primary;
-}
-
-.intro {
   p {
     margin: 0 auto;
-    font-size: 0.5em;
   }
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 1px rgb(0 0 0 / 40%);
+  }
+
 }

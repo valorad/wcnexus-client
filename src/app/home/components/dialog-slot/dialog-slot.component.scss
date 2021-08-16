@@ -1,3 +1,4 @@
+@import "src/theme";
 /**************************\
   Basic Modal Styles
 \**************************/
@@ -14,7 +15,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(255,255,255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,18 +23,24 @@
 
 .modal__container {
   background-color: #fff;
-  padding: 30px;
-  max-width: 98vw;
-  max-height: 100vh;
+  padding-bottom: 0.5em;
+  border: 2px solid $primary;
   border-radius: 4px;
   overflow-y: auto;
   box-sizing: border-box;
+  overflow-y: auto;
+  max-width: 80vw;
+  max-height: 50vh;
 }
 
 .modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 1em 0.5em;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .modal__title {
@@ -42,11 +49,12 @@
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #00449e;
+  color: $primary;
   box-sizing: border-box;
 }
 
 .modal__close {
+  cursor: pointer;
   background: transparent;
   border: 0;
 }
@@ -54,8 +62,7 @@
 .modal__header .modal__close:before { content: "\2715"; }
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding: 0 0.5em;
   line-height: 1.5;
   color: rgba(0,0,0,.8);
 }
@@ -94,7 +101,7 @@
 }
 
 .modal__btn-primary {
-  background-color: #00449e;
+  background-color: $primary;
   color: #fff;
 }
 
