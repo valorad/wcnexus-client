@@ -13,7 +13,7 @@ export class ProjectDetailComponent implements OnInit {
     project: {
       dbname: "project-test",
       name: "Test Project of the extreme Serendipity",
-      description: "# descr \n Test Project of the extreme Serendipity \n which is the wonder of **ultimate bizzarity** ",
+      description: "Test Project of the extreme Serendipity \n which is the wonder of **ultimate bizzarity** \n ## descr \n very very nice blah",
       url: "https://example.com",
       logo: "",
       type: "type-project",

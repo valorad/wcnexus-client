@@ -20,7 +20,6 @@ import { TextDisplayComponent } from './components/text-display/text-display.com
 import { DialogSlotComponent } from './components/dialog-slot/dialog-slot.component';
 import { MarkDownDisplayComponent } from './components/markdown-display/markdown-display.component';
 
-
 @NgModule({
   declarations: [
     HomeViewComponent,
