@@ -9,6 +9,14 @@ picture {
   width: 5em;
   height: 5em;
   border: 0.1rem solid $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
 }
 
 .nameBox {
