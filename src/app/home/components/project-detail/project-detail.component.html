@@ -30,12 +30,12 @@
     <h1>Unable to find this project.</h1>
   </ng-template>
 
-  <home-dialog-slot [DialogProps]="{id: 'project-description-' + ProjectDetailProps.project?.dbname || projectUUID, title: 'Project Description'}">
+  <dialog-slot [DialogProps]="projectDialogProps">
     <home-markdown-display dialogContent [MarkdownDisplayProps]="{content: ProjectDetailProps.project?.description}"></home-markdown-display>
-  </home-dialog-slot>
+  </dialog-slot>
 
-  <home-dialog-slot [DialogProps]="{id: 'project-tech-list-' + ProjectDetailProps.project?.dbname || techListUUID, title: 'Project Tech List'}">
+  <dialog-slot [DialogProps]="techListDialogProps">
     <home-tech-list dialogContent [TechListProps]="ProjectDetailProps.children?.techList || {}"></home-tech-list>
-  </home-dialog-slot>
+  </dialog-slot>
 
 </div>

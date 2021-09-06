@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IDialogSlotProps } from '@xmj-alliance/pit-angular.ui.dialog-slot/dist/src/dialog-slot.interface';
 import MicroModal from 'micromodal';
 import { IProjectDetailProps } from 'src/app/models/interfaces/project.interface';
 
@@ -59,6 +60,45 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
+  
+  primaryColor = "#4472c4";
+
+  dialogStyle = {
+    overlay: {
+      "background": "rgba(255,255,255, 0.5)",
+    },
+    header: {
+      position: "sticky",
+      top: "0",
+      padding: "1em 0.5em",
+      "background-color": "rgba(255, 255, 255, 0.5)"
+    },
+    container: {
+      "background-color": "#fff",
+      "padding-bottom": "0.5em",
+      border: `2px solid ${this.primaryColor}`,
+      "border-radius": "4px",
+      "overflow-y": "auto",
+      "max-width": "80vw",
+      "max-height": "50vh",
+    },
+    title: {
+      "color": this.primaryColor
+    }
+  }
+
+  projectUUID = Math.random().toString();
+
+  projectDialogProps: IDialogSlotProps = {
+    id: `dialog-project-description-${this.ProjectDetailProps?.project?.dbname || this.projectUUID}`,
+    title: 'Project Description',
+    styles: {
+      ...this.dialogStyle
+    }
+  }
+
+  techListUUID =  Math.random().toString();
+
   techListShort = {
     ...this.ProjectDetailProps?.children?.techList,
     limit: 3,
@@ -70,8 +110,13 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
-  projectUUID = Math.random().toString();
-  techListUUID =  Math.random().toString();
+  techListDialogProps: IDialogSlotProps = {
+    id: `dialog-project-tech-list-${this.ProjectDetailProps?.project?.dbname || this.techListUUID}`,
+    title: 'Project Tech List',
+    styles: {
+      ...this.dialogStyle
+    }
+  }
 
   onDescriptionClick = (e: MouseEvent) => {
     MicroModal.show(`dialog-project-description-${this.ProjectDetailProps.project?.dbname || this.projectUUID}`);

@@ -2731,6 +2731,13 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
+"@xmj-alliance/pit-angular.ui.dialog-slot@^1.0.1":
+  version "1.0.1"
+  resolved "https://node.bit.dev/@xmj-alliance/pit-angular.ui.dialog-slot/-/@xmj-alliance-pit-angular.ui.dialog-slot-1.0.1.tgz#a56345aa9ff064dbc3585a24d55032bbd704b998"
+  integrity sha1-pWNFqp/wZNvDWFok1VAyu9cEuZg=
+  dependencies:
+    tslib "^2.2.0"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

@@ -1,9 +1,9 @@
 <section class="HomeView">
   <!-- All modals go here, because they have to be put at the very top -->
-  <home-dialog-slot [DialogProps]="textDialogProps">
+  <dialog-slot [DialogProps]="textDialogProps">
     <!-- <home-text-display dialogContent [TextDisplayProps]="textDisplayTestContent"></home-text-display> -->
     <home-markdown-display dialogContent [MarkdownDisplayProps]="markdownDisplayProps"></home-markdown-display>
-  </home-dialog-slot>
+  </dialog-slot>
 
   <aside>
     <ul>

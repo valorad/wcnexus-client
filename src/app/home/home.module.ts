@@ -17,8 +17,9 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { TextDisplayComponent } from './components/text-display/text-display.component';
-import { DialogSlotComponent } from './components/dialog-slot/dialog-slot.component';
+
 import { MarkDownDisplayComponent } from './components/markdown-display/markdown-display.component';
+import { DialogSlotModule } from '@xmj-alliance/pit-angular.ui.dialog-slot';
 
 @NgModule({
   declarations: [
@@ -37,12 +38,14 @@ import { MarkDownDisplayComponent } from './components/markdown-display/markdown
     ProjectListComponent,
     CatalogComponent,
     TextDisplayComponent,
-    DialogSlotComponent,
+
     MarkDownDisplayComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,    
+    HomeRoutingModule,
+
+    DialogSlotModule,
   ]
 })
 export class HomeModule { }
