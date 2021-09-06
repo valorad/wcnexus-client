@@ -12,6 +12,9 @@ export class TechListComponent implements OnInit {
 
   @Input() TechListProps! : Partial<ITechListProps>
 
+  // default limit for techs to display
+  limit0 = 3;
+
   coverStyles0 = {
     image: {
       width: "4em",

@@ -1,9 +1,16 @@
 <div class="techList">
   <ul class="techListHolder">
-    <li *ngFor="let tech of TechListProps?.techs">
+    <!-- If provided techs, display only first n number of techs. The number n is controlled by either TechListProps?.limit or this.limit0  -->
+    <li class="techItem" *ngFor="let tech of (TechListProps?.techs || []).slice(0, (TechListProps?.limit || limit0))">
       <home-instance-card
         [InstanceCardProps]="techToInstance(tech)"
       ></home-instance-card>
+    </li>
+    <li *ngIf="(TechListProps?.techs?.length || 0) - (TechListProps?.limit || 0) > 0">
+      ...
+    </li>
+    <li *ngIf="(TechListProps?.techs?.length || 0) <= 0">
+      No Techs
     </li>
   </ul>
 </div>

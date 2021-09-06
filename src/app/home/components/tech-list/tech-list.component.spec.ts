@@ -58,12 +58,74 @@ describe("techList test", () => {
       ]
     };
 
-    const ul = element.querySelector(".techListHolder") as HTMLUListElement;
-
     component.TechListProps = props;
     fixture.detectChanges(); 
 
-    expect(ul.childElementCount).toEqual(props.techs.length);
+    const lis = element.querySelectorAll(".techItem") as NodeListOf<HTMLLIElement>;
+
+    expect(lis.length).toEqual(props.techs.length);
+
+  });
+
+  test('Display Limit', () => {
+
+    const limit = 1;
+
+    const props: ITechListProps = {
+      techs: [
+        {
+          dbname: "nexus-angular",
+          name: "Angular",
+          description: "Angular",
+          url: "",
+          logo: "angular.jpg",
+          type: "type-technology",
+        },
+        {
+          dbname: "nexus-dotnet",
+          name: ".Net",
+          description: ".Net",
+          url: "",
+          logo: "dotnet.jpg",
+          type: "type-technology",
+        },
+        {
+          dbname: "nexus-docker",
+          name: "Docker",
+          description: "Docker",
+          url: "",
+          logo: "docker.jpg",
+          type: "type-technology",
+        },
+      ],
+      limit: limit
+    };
+    
+    component.TechListProps = props;
+    fixture.detectChanges(); 
+
+    const lis = element.querySelectorAll(".techItem") as NodeListOf<HTMLLIElement>;
+
+    expect(lis.length).toEqual(limit);
+
+  });
+
+  test('No tech', () => {
+
+    const zeroContent = "No Techs";
+
+    const props: ITechListProps = {
+      techs: []
+    };
+    
+    component.TechListProps = props;
+    fixture.detectChanges(); 
+
+    const ul = element.querySelector(".techListHolder") as HTMLUListElement;
+    const lis = ul.querySelectorAll("li");
+
+    expect(lis.length).toEqual(1);
+    expect(lis[0].innerHTML.toLowerCase()).toContain(zeroContent.toLowerCase());
 
   });
 

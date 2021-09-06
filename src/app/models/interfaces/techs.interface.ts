@@ -5,4 +5,5 @@ import { INexus } from "./nexus.interface";
 export interface ITechListProps extends ICommomProps {
   techs: INexus[],
   cardStyle?: IInstanceCardProps["styles"],
+  limit?: number,
 }
