@@ -7,6 +7,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development
 
+### Getting Node Modules
+
+Configure @xmj-alliance as a bit Scoped Registry.
+
+``` shell
+npm config set '@xmj-alliance:registry' https://node.bit.dev
+```
+
+Then get Node modules as you would.
+
+``` shell
+yarn install
+```
+
 ### Notes
 - `@angular/cli` native implemention. You can use any command from official cli.
 - Sass enabled.
