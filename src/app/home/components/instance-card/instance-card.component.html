@@ -1,9 +1,22 @@
 <div class="instanceCard">
-  <picture [ngStyle]="InstanceCardProps?.styles?.image || null">
-    <img src="assets/images/tech-default.png" alt="tech-default.png">
-    <!-- {{ InstanceCardProps?.image }} -->
-  </picture>
+
+  <ng-container
+    *ngIf="InstanceCardProps?.image; then hasImage; else noImage">
+  </ng-container>
+
   <div class="nameBox flexCenter" [ngStyle]="InstanceCardProps?.styles?.title || null">
     <h3>{{ InstanceCardProps?.name }}</h3>
   </div>
 </div>
+
+<ng-template #hasImage>
+  <picture [ngStyle]="InstanceCardProps?.styles?.image || null">
+    <img [src]="imageBasePath + '/' + InstanceCardProps?.image" [alt]="InstanceCardProps?.name || 'Image'">
+  </picture>
+</ng-template>
+
+<ng-template #noImage>
+  <picture [ngStyle]="InstanceCardProps?.styles?.image || null">
+    <img [src]="imageBasePath + '/' + 'tech-default.png'" alt="tech-default.png">
+  </picture>
+</ng-template>

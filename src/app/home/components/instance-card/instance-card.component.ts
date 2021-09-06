@@ -10,6 +10,8 @@ export class InstanceCardComponent implements OnInit {
 
   @Input() InstanceCardProps! : Partial<IInstanceCardProps>
 
+  imageBasePath = "statics/images";
+
   constructor() { }
 
   ngOnInit(): void {
