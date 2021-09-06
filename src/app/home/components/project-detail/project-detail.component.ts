@@ -48,22 +48,37 @@ export class ProjectDetailComponent implements OnInit {
             type: "type-technology",
           },
         ],
-
+        limit: 100,
         cardStyle: {
           image: {
-            width: "1em",
-            height: "1em",
+            width: "3em",
+            height: "3em",
           }
         }
+      }
+    }
+  }
 
+  techListShort = {
+    ...this.ProjectDetailProps?.children?.techList,
+    limit: 3,
+    cardStyle: {
+      image: {
+        width: "1em",
+        height: "1em",
       }
     }
   }
 
   projectUUID = Math.random().toString();
+  techListUUID =  Math.random().toString();
 
   onDescriptionClick = (e: MouseEvent) => {
     MicroModal.show(`dialog-project-description-${this.ProjectDetailProps.project?.dbname || this.projectUUID}`);
+  };
+
+  onTechListClick = (e: MouseEvent) => {
+    MicroModal.show(`dialog-project-tech-list-${this.ProjectDetailProps.project?.dbname || this.techListUUID}`);
   };
 
   constructor() { }

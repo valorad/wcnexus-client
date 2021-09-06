@@ -8,14 +8,14 @@
 
     <div class="cover">
       <picture>
-        <img src="assets/images/a.jpg" alt="a.jpg">
+        <img src="statics/images/a.jpg" alt="a.jpg">
       </picture>
       <h3>{{ ProjectDetailProps.project?.name }}</h3>
       <small>Click to see more images</small>
     </div>
   
-    <div class="techs">
-      <home-tech-list [TechListProps]="ProjectDetailProps.children?.techList || {}"></home-tech-list>
+    <div class="techs" (click)="onTechListClick($event)">
+      <home-tech-list [TechListProps]="techListShort"></home-tech-list>
     </div>
   
     <div class="description" (click)="onDescriptionClick($event)">
@@ -32,6 +32,10 @@
 
   <home-dialog-slot [DialogProps]="{id: 'project-description-' + ProjectDetailProps.project?.dbname || projectUUID, title: 'Project Description'}">
     <home-markdown-display dialogContent [MarkdownDisplayProps]="{content: ProjectDetailProps.project?.description}"></home-markdown-display>
+  </home-dialog-slot>
+
+  <home-dialog-slot [DialogProps]="{id: 'project-tech-list-' + ProjectDetailProps.project?.dbname || techListUUID, title: 'Project Tech List'}">
+    <home-tech-list dialogContent [TechListProps]="ProjectDetailProps.children?.techList || {}"></home-tech-list>
   </home-dialog-slot>
 
 </div>
