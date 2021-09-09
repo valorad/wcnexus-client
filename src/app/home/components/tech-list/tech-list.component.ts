@@ -27,7 +27,7 @@ export class TechListComponent implements OnInit {
 
   techToInstance = (tech: INexus): IInstanceCardProps => ({
     name: tech.name,
-    image: tech.logo,
+    image: tech.avatar,
     styles: {
       ...this.coverStyles0,
       ...this.TechListProps?.cardStyle

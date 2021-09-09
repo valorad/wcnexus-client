@@ -24,32 +24,40 @@ export class HomeViewComponent implements OnInit {
       name: "My Weibo",
       description: "My Weibo",
       url: "https://weibo.com/wcxaaa",
-      logo: "github-avatar.jpg",
+      avatar: "github-avatar.jpg",
       type: "type-social",
+      cover: "",
+      photos: []
     },
     {
       dbname: "nexus-zhihu",
       name: "My Zhihu",
       description: "My Zhihu",
       url: "https://www.zhihu.com/people/valorad",
-      logo: "github-avatar.jpg",
+      avatar: "github-avatar.jpg",
       type: "type-social",
+      cover: "",
+      photos: [],
     },
     {
       dbname: "nexus-twitter",
       name: "My Twitter",
       description: "My Twitter",
       url: "https://twitter.com/wcxaaa",
-      logo: "github-avatar.jpg",
+      avatar: "github-avatar.jpg",
       type: "type-social",
+      cover: "",
+      photos: [],
     },
     {
       dbname: "nexus-github",
       name: "My Github",
       description: "My Github",
       url: "https://github.com/valorad",
-      logo: "github-avatar.jpg",
+      avatar: "github-avatar.jpg",
       type: "type-social",
+      cover: "",
+      photos: [],
     },
   ];
 
@@ -68,24 +76,30 @@ export class HomeViewComponent implements OnInit {
         name: "My Github",
         description: "My Github",
         url: "https://github.com/valorad",
-        logo: "github-avatar.jpg",
+        avatar: "github-avatar.jpg",
         type: "type-site",
+        cover: "",
+        photos: [],
       },
       {
         dbname: "nexus-3yibao-react-site",
         name: "3yibao React",
         description: "3yibao React",
         url: "https://www.wcnexus.com/3yibao",
-        logo: "3yibao.jpg",
+        avatar: "3yibao.jpg",
         type: "type-site",
+        cover: "",
+        photos: [],
       },
       {
         dbname: "nexus-billy-cdk-site",
         name: "BillyCDK.dll",
         description: "BillyCDK.dll",
         url: "https://www.wcnexus.com/bdk",
-        logo: "bdk.jpg",
+        avatar: "bdk.jpg",
         type: "type-site",
+        cover: "",
+        photos: [],
       },
     ],
     socialMedia: this.socialMedia,
@@ -109,9 +123,10 @@ export class HomeViewComponent implements OnInit {
             description: "Smart Eat-Out",
             techs: [],
             url: "",
-            logo: "",
+            avatar: "",
             type: "type-project",
-            images: [
+            cover: "",
+            photos: [
               {
                 dbname: "",
                 url: "",
@@ -124,9 +139,10 @@ export class HomeViewComponent implements OnInit {
             description: "billy-CDK",
             techs: [],
             url: "",
-            logo: "",
+            avatar: "",
             type: "type-project",
-            images: [
+            cover: "",
+            photos: [
               {
                 dbname: "",
                 url: "",
@@ -139,9 +155,10 @@ export class HomeViewComponent implements OnInit {
             description: "voila-CDN",
             techs: [],
             url: "",
-            logo: "",
+            avatar: "",
             type: "type-project",
-            images: [
+            cover: "",
+            photos: [
               {
                 dbname: "",
                 url: "",
@@ -154,9 +171,10 @@ export class HomeViewComponent implements OnInit {
             description: "Container-based AutoML",
             techs: [],
             url: "",
-            logo: "",
+            avatar: "",
             type: "type-project",
-            images: [
+            cover: "",
+            photos: [
               {
                 dbname: "",
                 url: "",
@@ -169,9 +187,10 @@ export class HomeViewComponent implements OnInit {
             description: "3yibao-react",
             techs: [],
             url: "",
-            logo: "",
+            avatar: "",
             type: "type-project",
-            images: [
+            cover: "",
+            photos: [
               {
                 dbname: "",
                 url: "",
@@ -243,7 +262,7 @@ export class HomeViewComponent implements OnInit {
       this.welcomeProps.children.gameWall.games.push(
         {
           name: `game-${i}`,
-          logo: `ag${i}`,
+          avatar: `ag${i}`,
           type: "type-game",
         } as INexus
       );

@@ -21,7 +21,7 @@ export class GameWallComponent implements OnInit {
 
   gameToInstance = (game: INexus): IInstanceCardProps => ({
     name: game.name,
-    image: game.logo,
+    image: game.avatar,
     styles: {
       image: this.baseStyle,
       title: {

@@ -19,7 +19,7 @@ export class ThankYouComponent implements OnInit {
 
   siteToInstance = (site: INexus): IInstanceCardProps => ({
     name: site.name,
-    image: site.logo,
+    image: site.avatar,
     styles: {
       image: {
         ...this.imageBaseSettings

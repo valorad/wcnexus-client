@@ -18,7 +18,7 @@ export class ProjectListComponent implements OnInit {
 
   projectToInstance = (project: IProject): IInstanceCardProps => ({
     name: project.name,
-    image: project.logo,
+    image: project.avatar,
     styles: {
       image: {
         ...this.imageBaseSettings

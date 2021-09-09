@@ -6,7 +6,7 @@
         [InstanceCardProps]="techToInstance(tech)"
       ></home-instance-card>
     </li>
-    <li *ngIf="(TechListProps?.techs?.length || 0) - (TechListProps?.limit || 0) > 0">
+    <li *ngIf="(TechListProps?.techs?.length || 0) - (TechListProps?.limit || limit0) > 0">
       ...
     </li>
     <li *ngIf="(TechListProps?.techs?.length || 0) <= 0">

@@ -1,11 +1,10 @@
 import { ICommomProps } from './common-props.interface';
 import { INexus } from './nexus.interface';
-import { IPhoto } from './photo.interface';
+
 import { ITechListProps } from './techs.interface';
 
 export interface IProject extends INexus {
   techs: INexus[],
-  images: IPhoto[],
 }
 
 export interface IProjectListProps extends ICommomProps {
